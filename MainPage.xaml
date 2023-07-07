@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage 
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="NavigationEllipsis.MainPage">
+
+    <NavigationPage.TitleView>
+        <Grid 
+            ColumnSpacing="10"
+            ColumnDefinitions="50, *, 35, Auto"
+            HorizontalOptions="Fill"
+            Padding="0,0,5,0">
+            <Button
+                Grid.Column="0"
+                x:Name="btnMenu"
+                Margin="0,0,0,5"
+                WidthRequest="50"
+                HeightRequest="50"
+                AutomationId="btnMenu"
+                StyleClass="NavIconButton, NavBar"
+                Text="B" />
+            <Label
+                Grid.Column="1"
+                x:Name="lblPageTitle"
+                HorizontalOptions="FillAndExpand"
+                Text="PageTitle"
+                AutomationId="lblPageTitle"
+                TextColor="#fff"
+                VerticalOptions="Center" />
+            <Button 
+                x:Name="btnThemeDark"
+                Grid.Column="2"
+                HorizontalOptions="End"
+                AutomationId="btnThemeDark"
+                HeightRequest="35"
+                StyleClass="NavIconButton, NavBar"
+                Text="S" />
+            <Button 
+                x:Name="btnProfileName"
+                Grid.Column="3"
+                WidthRequest="-1"
+                HeightRequest="40"
+                HorizontalOptions="End"
+                Text="Assessor.FullName"
+                AutomationId="btnProfileName"/>
+        </Grid>
+    </NavigationPage.TitleView>
+
+    <ScrollView>
+        <VerticalStackLayout
+            Spacing="25"
+            Padding="30,0"
+            VerticalOptions="Center">
+
+            <Label
+                x:Name="CounterBtn"
+                Text="Nothing to see here"
+                HorizontalOptions="Center" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
